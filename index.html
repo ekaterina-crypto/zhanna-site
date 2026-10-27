@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Жанна Елисеева — протокол работы с VIP-клиентами</title>
+<meta name="description" content="Премиум-наставничество для турагентов. Сервисный сбор, этикет, приватность и системная работа с VIP-клиентами от Жанны Елисеевой — 18 лет в дипломатическом протоколе.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --emerald:#004E2F;
+  --emerald-deep:#003B24;
+  --taupe:#EAE5DD;
+  --ink:#2D2D2D;
+  --rose:#E6D5D0;
+  --paper:#F6F3EE;
+  --muted:#6E6B65;
+  --line:rgba(45,45,45,.16);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.8;font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--serif);font-style:italic;font-weight:500;line-height:1.08;letter-spacing:-.015em;margin:0}
+h1{font-size:clamp(3rem,6.6vw,6.1rem)}
+h2{font-size:clamp(2.4rem,4.6vw,4.2rem)}
+h3{font-size:clamp(1.6rem,2.4vw,2.1rem)}
+p{margin:0 0 1.4em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+::selection{background:var(--emerald);color:var(--taupe)}
+:focus-visible{outline:2px solid var(--emerald);outline-offset:5px}
+.container{width:min(1240px,90%);margin-inline:auto}
+.section{padding-block:clamp(96px,12vw,180px)}
+.eyebrow{
+  font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:34px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.55}
+.lead{font-size:clamp(1rem,1.35vw,1.16rem);color:var(--muted);max-width:52ch}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:16px;
+  padding:19px 30px;border:1px solid var(--emerald);background:var(--emerald);color:var(--paper);
+  font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  cursor:pointer;border-radius:1px;transition:background .3s,color .3s,transform .3s;
+}
+.btn:hover{background:transparent;color:var(--emerald);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--emerald)}
+.btn.ghost:hover{background:var(--emerald);color:var(--paper)}
+.btn.light{background:var(--taupe);border-color:var(--taupe);color:var(--emerald)}
+.btn.light:hover{background:transparent;color:var(--taupe)}
+.btn span{font-size:17px;line-height:1}
+.link-arrow{display:inline-flex;gap:12px;align-items:center;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-bottom:1px solid currentColor;padding-bottom:6px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+.skip{position:absolute;left:-9999px;top:0;background:var(--emerald);color:#fff;padding:12px;z-index:99}
+.skip:focus{left:12px}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:50;background:rgba(246,243,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:30px;padding-block:20px}
+.brand{display:flex;align-items:center;gap:15px}
+.mono{
+  width:44px;height:44px;border:1px solid var(--emerald);color:var(--emerald);
+  display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:21px;flex:none;
+}
+.brand-name{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;line-height:1.5}
+.brand-name small{display:block;font-size:9px;letter-spacing:.18em;font-weight:400;color:var(--muted)}
+.nav{display:flex;gap:32px}
+.nav a{font-size:12px;letter-spacing:.05em;position:relative}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--emerald);transition:width .3s}
+.nav a:hover::after{width:100%}
+.header .btn{padding:13px 22px}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.burger i{display:block;width:24px;height:1px;background:var(--ink);margin:6px 0}
+
+/* HERO */
+.hero{background:var(--taupe);position:relative;overflow:hidden}
+.hero::after{
+  content:"";position:absolute;right:-180px;top:-180px;width:620px;height:620px;
+  border:1px solid rgba(0,78,47,.12);border-radius:50%;pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .8fr;gap:80px;align-items:center;padding-block:clamp(80px,10vw,140px)}
+.hero h1{color:var(--emerald);margin-bottom:34px}
+.hero .lead{max-width:46ch;color:var(--ink);margin-bottom:42px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:44px}
+.hero-note{font-size:12px;color:var(--muted);letter-spacing:.03em}
+.invite{А
+  background:var(--paper);border:1px solid rgba(0,78,47,.3);padding:44px 34px;
+  transform:rotate(-2deg);position:relative;box-shadow:0 30px 70px -40px rgba(0,60,35,.35);
+}
+.invite::before{content:"";position:absolute;inset:12px;border:1px solid rgba(0,78,47,.14);pointer-events:none}
+.invite small{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.invite h3{font-size:3rem;color:var(--emerald);margin:26px 0 8px;letter-spacing:.02em}
+.invite .divider{height:1px;background:var(--line);margin:26px 0}
+.invite ul{list-style:none;padding:0;margin:0;font-size:12px;line-height:2.4;color:var(--muted)}
+.invite .stamp{
+  display:inline-block;margin-top:30px;border:1px solid var(--emerald);color:var(--emerald);
+  padding:7px 14px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;transform:rotate(3deg);
+}
+.principles{background:var(--emerald);color:var(--taupe)}
+.principles-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;padding-block:30px;font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2vw,1.7rem)}
+.principles-inner span{opacity:.9}
+
+/* PROBLEM */
+.split-head{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:76px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.compare-card{padding:46px 40px;border:1px solid var(--line);background:transparent}
+.compare-card.premium{background:var(--emerald);color:var(--taupe);border-color:var(--emerald)}
+.compare-card .tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.compare-card h3{margin:20px 0 28px}
+.compare-card dl{margin:0 0 28px}
+.compare-card dl div{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.compare-card.premium dl div{border-color:rgba(234,229,221,.2)}
+.compare-card dd{margin:0;font-weight:600}
+.compare-card p{font-size:14px;margin:0;opacity:.8}
+.fine{font-size:11px;color:var(--muted);margin-top:24px}
+
+/* EXPERT */
+.expert{background:var(--emerald);color:var(--taupe);position:relative;overflow:hidden}
+.expert .eyebrow{color:var(--rose)}
+.expert-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:90px;align-items:start}
+.expert blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(2rem,3.6vw,3.3rem);line-height:1.2}
+.expert blockquote em{color:var(--rose)}
+.expert-copy p{color:rgba(234,229,221,.82);font-size:15px}
+.facts{display:flex;gap:44px;margin-top:44px;flex-wrap:wrap}
+.fact b{display:block;font-family:var(--serif);font-style:italic;font-size:2.8rem;line-height:1;color:var(--rose)}
+.fact span{font-size:11px;letter-spacing:.08em;opacity:.75}
+
+/* PRODUCTS */
+.section-head{max-width:760px;margin-bottom:70px}
+.section-head .lead{margin-top:26px}
+.product{border-top:1px solid var(--line)}
+.product:last-child{border-bottom:1px solid var(--line)}
+.product summary{
+  list-style:none;cursor:pointer;display:grid;grid-template-columns:56px 1fr auto 30px;
+  gap:28px;align-items:center;padding:38px 0;
+}
+.product summary::-webkit-details-marker{display:none}
+.product .num{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--muted)}
+.product .name{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.2}
+.product .name small{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.product .price{font-size:15px;font-weight:600;white-space:nowrap}
+.product .price small{display:block;font-size:10px;font-weight:400;color:var(--muted);text-align:right;letter-spacing:.06em}
+.plus{width:26px;height:26px;position:relative}
+.plus::before,.plus::after{content:"";position:absolute;background:var(--emerald);left:50%;top:50%;transform:translate(-50%,-50%)}
+.plus::before{width:16px;height:1px}
+.plus::after{width:1px;height:16px;transition:transform .3s}
+.product[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.product-body{padding:0 60px 42px 84px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.product-body ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
+.product-body li{margin-bottom:8px}
+
+/* CLUB */
+.club{background:var(--taupe)}
+.club-box{background:var(--paper);padding:clamp(36px,6vw,84px);display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;border:1px solid var(--line)}
+.club-title h2{color:var(--emerald);font-size:clamp(2.6rem,5vw,4.6rem)}
+.club-title p{margin-top:28px;font-size:14px;color:var(--muted)}
+.club-badge{display:inline-block;background:var(--rose);color:var(--ink);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:8px 14px;margin-bottom:30px}
+.benefits{list-style:none;padding:0;margin:0 0 36px}
+.benefits li{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:26px 1fr;gap:16px;font-size:14px}
+.benefits li b{display:block;font-weight:600;margin-bottom:4px}
+.benefits li span{color:var(--muted);font-size:13px}
+.benefits li i{font-style:normal;color:var(--emerald);font-size:15px}
+
+/* PODCAST */
+.podcast-head{display:flex;justify-content:space-between;align-items:flex-end;gap:50px;margin-bottom:64px;flex-wrap:wrap}
+.episodes{border-top:1px solid var(--line)}
+.episode{display:grid;grid-template-columns:60px 1.2fr 1fr auto;gap:32px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:padding-left .3s,background .3s}
+.episode:hover{padding-left:14px;background:rgba(230,213,208,.25)}
+.episode .ep-num{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--emerald)}
+.episode h3{font-size:1.5rem}
+.episode p{font-size:13px;color:var(--muted);margin:0}
+.episode .time{font-size:11px;letter-spacing:.1em;color:var(--muted);white-space:nowrap}
+.podcast-foot{margin-top:36px;display:flex;gap:30px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+
+/* CALC */
+.calc{background:var(--emerald);color:var(--taupe)}
+.calc .eyebrow{color:var(--rose)}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.calc label{display:block;font-size:12px;letter-spacing:.06em;margin-bottom:14px}
+.calc input[type=range]{width:100%;accent-color:var(--rose);cursor:pointer}
+.calc select,.calc .range-value{font-family:var(--sans);font-size:14px}
+.calc select{width:100%;padding:14px;background:transparent;border:1px solid rgba(234,229,221,.35);color:var(--taupe);border-radius:0;margin-bottom:34px}
+.calc select option{background:var(--emerald);color:var(--taupe)}
+.field{margin-bottom:34px}
+.range-value{color:var(--rose);font-weight:600}
+.calc-result{border-left:1px solid rgba(234,229,221,.25);padding-left:60px}
+.calc-result .metric{margin-bottom:44px}
+.calc-result .metric b{display:block;font-family:var(--serif);font-style:italic;font-size:clamp(2.6rem,5vw,4.4rem);color:var(--rose);line-height:1.1}
+.calc-result .metric span{font-size:12px;letter-spacing:.06em;opacity:.8}
+.calc .fine{color:rgba(234,229,221,.6)}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:80px}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;gap:24px;font-size:15px;font-weight:600}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item[open] summary{color:var(--emerald)}
+.faq-item p{font-size:14px;color:var(--muted);padding-bottom:26px;margin:0}
+
+/* FORM */
+.application{background:var(--rose)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.form-grid h2{color:var(--emerald)}
+.gift{list-style:none;padding:0;margin:34px 0 0;font-size:14px}
+.gift li{padding:10px 0;display:flex;gap:14px}
+.gift li::before{content:"—";color:var(--emerald)}
+form{background:var(--paper);padding:46px;border:1px solid rgba(0,78,47,.2)}
+.form-field{margin-bottom:26px}
+.form-field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;color:var(--muted)}
+.form-field input{
+  width:100%;padding:15px 0;background:transparent;border:0;border-bottom:1px solid var(--line);
+  border-radius:0;font-family:var(--sans);font-size:15px;color:var(--ink);
+}
+.form-field input:focus{outline:none;border-color:var(--emerald)}
+.consent{display:flex;gap:12px;font-size:11px;color:var(--muted);line-height:1.7;margin:28px 0}
+.consent input{accent-color:var(--emerald);margin-top:5px;flex:none}
+form .btn{width:100%}
+.form-hint{font-size:11px;color:var(--muted);margin:20px 0 0}
+.form-status{margin-top:22px;font-size:13px;padding:18px;background:var(--taupe);display:none}
+.form-status.show{display:block}
+
+/* FOOTER */
+.footer{background:var(--ink);color:var(--taupe);padding-block:70px 36px}
+.footer-top{display:flex;justify-content:space-between;gap:50px;flex-wrap:wrap;margin-bottom:60px}
+.footer h3{font-size:2rem;margin-bottom:16px}
+.footer p{font-size:13px;opacity:.65;max-width:38ch}
+.footer nav{display:flex;gap:28px;flex-wrap:wrap;font-size:12px}
+.footer nav a:hover{color:var(--rose)}
+.footer-bottom{border-top:1px solid rgba(234,229,221,.15);padding-top:26px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:11px;opacity:.6}
+
+@media(max-width:1000px){
+  .nav{gap:20px}.hero-grid,.expert-grid,.calc-grid,.form-grid,.club-box{gap:50px}
+  .product-body{padding-left:0}.episode{grid-template-columns:40px 1fr auto}.episode p{display:none}
+  .faq-grid{gap:40px}
+}
+@media(max-width:760px){
+  .nav{
+    position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);
+    flex-direction:column;gap:0;padding:12px 5%;display:none;
+  }
+  .nav.open{display:flex}.nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}.header .btn{display:none}
+  .hero-grid,.expert-grid,.calc-grid,.form-grid,.club-box,.split-head,.compare,.faq-grid{grid-template-columns:1fr}
+  .hero-grid{padding-block:70px}.invite{transform:none;max-width:400px;margin-top:20px}
+  .club-box{gap:44px}.calc-result{padding-left:0;border-left:0;border-top:1px solid rgba(234,229,221,.25);padding-top:44px}
+  .product summary{grid-template-columns:30px 1fr 24px;gap:16px}
+  .product .price{grid-column:2;text-align:left}
+  .product-body{grid-template-columns:1fr;padding:0 0 34px 46px}
+  .compare-card{padding:32px 26px}.episode{grid-template-columns:30px 1fr;gap:16px}
+  .episode .time{display:none}form{padding:30px 24px}
+  .principles-inner{justify-content:flex-start;gap:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="brand" aria-label="Жанна Елисеева — на главную">
+      <span class="brand-name">Жанна Елисеева<small>Протокол высокого чека</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#expert">Эксперт</a>
+      <a href="#products">Продукты</a>
+      <a href="#club">Клуб</a>
+      <a href="#podcast">Подкаст</a>
+      <a href="#application">Заявка</a>
+    </nav>
+    <a href="#application" class="btn">Получить доступ</a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Закрытая экосистема · luxury travel</div>
+      <h1>Перестаньте быть<br>«бронировщиком».</h1>
+      <p class="lead">Я не учу продавать туры. Я учу выстраивать систему, в которой VIP-клиенты платят сервисный сбор, прощают форс-мажоры и возвращаются годами. Потому что вы владеете протоколом, которого нет в открытых источниках.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn">Я уже работаю с VIP <span>↗</span></a>
+        <a href="#expert" class="btn ghost">Хочу перейти на высокий чек</a>
+      </div>
+      <p class="hero-note">18 лет дипломатического протокола. Одна система работы с людьми, у которых есть всё.</p>
+    </div>
+    <aside class="invite reveal" aria-label="Приглашение в клуб">
+      <small>Личное приглашение</small>
+      <h3>PROTOCOL</h3>
+      <small>Закрытый клуб турагентов</small>
+      <div class="divider"></div>
+      <ul>
+        <li>Протокол переговоров</li>
+        <li>Цифровой этикет и приватность</li>
+        <li>Сервисный сбор без страха</li>
+        <li>Разбор реальных провалов</li>
+      </ul>
+      <span class="stamp">Только по заявке</span>
+    </aside>
+  </div>
+</section>
+
+<div class="principles">
+  <div class="container principles-inner">
+    <span>Безопасность</span><span>Приватность</span><span>Безупречная этика</span><span>Предсказуемость</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="section" id="problem">
+  <div class="container">
+    <div class="split-head reveal">
+      <div>
+        <div class="eyebrow">Разрыв шаблона</div>
+        <h2>Разница не в удаче.<br>Разница в протоколе.</h2>
+      </div>
+      <p class="lead">Пока вы объясняете клиенту, почему этот отель на 2 000 ₽ дешевле, ваш коллега уже отправил маршрут на Мальдивы и получил: «Спасибо, оплачиваю».</p>
+    </div>
+
+    <div class="compare reveal">
+      <article class="compare-card">
+        <span class="tag">Модель «Масс-маркет»</span>
+        <h3>20 клиентов.<br>Ноль границ.</h3>
+        <dl>
+          <div><dt>Чеки</dt><dd>20 × 150 000 ₽</dd></div>
+          <div><dt>Комиссия с тура</dt><dd>15 000 ₽</dd></div>
+          <div><dt>Доход</dt><dd>300 000 ₽</dd></div>
+          <div><dt>График</dt><dd>12 часов · 6 дней</dd></div>
+        </dl>
+        <p>Торг за каждую тысячу. Страх назвать сервисный сбор. Доступность 24/7.</p>
+      </article>
+      <article class="compare-card premium">
+        <span class="tag">Модель «Протокол»</span>
+        <h3>3 клиента.<br>Система на годы.</h3>
+        <dl>
+          <div><dt>Чеки</dt><dd>3 × 1 000 000 ₽</dd></div>
+          <div><dt>Комиссия + сбор</dt><dd>50 000 ₽</dd></div>
+          <div><dt>Доход</dt><dd>450 000 ₽</dd></div>
+          <div><dt>График</dt><dd>3 дня в неделю</dd></div>
+        </dl>
+        <p>Клиент прощает овербукинг — потому что доверяет вам, а не цене на Booking.</p>
+      </article>
+    </div>
+    <p class="fine">Сравнение из авторских материалов — иллюстрация двух моделей работы, не гарантия дохода.</p>
+  </div>
+</section>
+
+<!-- EXPERT -->
+<section class="section expert" id="expert">
+  <div class="container expert-grid">
+    <div class="reveal">
+      <div class="eyebrow">О Жанне</div>
+      <blockquote>Они не покупают «отели 5*».<br>Они покупают <em>безопасность.</em></blockquote>
+    </div>
+    <div class="expert-copy reveal">
+      <p>18 лет в отделе протокола посольства США. Организация визитов первых лиц. Понимание того, как мыслят люди, которые принимают решения и у которых есть всё.</p>
+      <p>Придя в luxury-туризм, Жанна увидела: талантливые агенты теряют миллионных клиентов не из-за знания отелей, а из-за незнания негласного протокола. Она перевела дипломатический протокол на язык тревел-индустрии.</p>
+      <p>Не «как нажать кнопку в системе». А как держать переговоры, выстраивать доверие, обозначать границы и сохранять репутацию в самом требовательном сегменте.</p>
+      <div class="facts">
+        <div class="fact"><b>18</b><span>лет в протоколе</span></div>
+        <div class="fact"><b>VIP</b><span>аудитория и мышление</span></div>
+        <div class="fact"><b>01</b><span>протокол вместо хаоса</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Продуктовая линейка</div>
+      <h2>От первого разбора<br>до закрытого клуба.</h2>
+      <p class="lead">Четыре входа в систему. Начните с точки, где вы сейчас, — двигайтесь к модели, в которой клиент платит за доступ к вашей экспертизе.</p>
+    </div>
+
+    <details class="product reveal">
+      <summary>
+        <span class="num">01</span>
+        <span class="name">Открытые семинары<small>Точечная проработка одной боли</small></span>
+        <span class="price">По запросу<small>дата и стоимость</small></span>
+        <span class="plus" aria-hidden="true"></span>
+      </summary>
+      <div class="product-body">
+        <ul>
+          <li>«Сервисный сбор: как назвать цену и услышать “спасибо”»</li>
+          <li>«Цифровой этикет: переписка, которая продаёт»</li>
+          <li>«Форс-мажор без потери лица: протокол реакции»</li>
+          <li>«Как отказать VIP-клиенту так, чтобы он поблагодарил»</li>
+        </ul>
+        <a href="#application" class="link-arrow">Узнать дату ↗</a>
+      </div>
+    </details>
+
+    <details class="product reveal">
+      <summary>
+        <span class="num">02</span>
+        <span class="name">Персональная консультация<small>Разбор вашей ситуации</small></span>
+        <span class="price">19 000 ₽<small>за сессию</small></span>
+        <span class="plus" aria-hidden="true"></span>
+      </summary>
+      <div class="product-body">
+        <ul>
+          <li>Диагностика текущей модели работы и клиентского потока</li>
+          <li>Скрипт сервисного сбора под ваш продукт</li>
+          <li>Границы коммуникации и сценарии выхода из токсичных сделок</li>
+          <li>План перехода от посредника к тревел-архитектору</li>
+        </ul>
+        <a href="#application" class="link-arrow">Записаться ↗</a>
+      </div>
+    </details>
+
+    <details class="product reveal">
+      <summary>
+        <span class="num">03</span>
+        <span class="name">Клуб PROTOCOL<small>Ежемесячное закрытое сопровождение</small></span>
+        <span class="price">6 900 ₽<small>в месяц</small></span>
+        <span class="plus" aria-hidden="true"></span>
+      </summary>
+      <div class="product-body">
+        <ul>
+          <li>Библиотека рабочих формулировок — новые шаблоны каждый месяц</li>
+          <li>Модерируемый закрытый чат: ответы эксперта среду и пятницу</li>
+          <li>Анонимная рубрика «Разбор полётов»</li>
+          <li>Модули про деньги, границы, репутацию и travel-дизайн</li>
+        </ul>
+        <a href="#club" class="link-arrow">Что внутри ↗</a>
+      </div>
+    </details>
+
+    <details class="product reveal">
+      <summary>
+        <span class="num">04</span>
+        <span class="name">Записи семинаров<small>В своём часовом поясе</small></span>
+        <span class="price">9 900 ₽<small>за комплект</small></span>
+        <span class="plus" aria-hidden="true"></span>
+      </summary>
+      <div class="product-body">
+        <ul>
+          <li>Записанные модули высокого продакшена</li>
+          <li>Шаблоны сообщений, договоров и отказов</li>
+          <li>Подходит агентам из-за рубежа и при плотном графике</li>
+        </ul>
+        <a href="#application" class="link-arrow">Получить состав ↗</a>
+      </div>
+    </details>
+    <p class="fine">Стоимость консультаций, клуба и записей — по материалам продуктовой линейки. Даты и цены семинаров подтверждаются индивидуально.</p>
+  </div>
+</section>
+
+<!-- CLUB -->
+<section class="section club" id="club">
+  <div class="container">
+    <div class="club-box reveal">
+      <div class="club-title">
+        <span class="club-badge">Не чат на 500 молчащих</span>
+        <h2>PROTOCOL</h2>
+        <p>Закрытое пространство для агентов, которые работают с высоким чеком. Только по делу, без рекламы и токсичности. Модерация, личные ответы и знания, которые не выкладывают в открытый доступ.</p>
+        <p><strong>Формат:</strong> асинхронные модули + живые встречи, приглашённые юристы и финансисты, офлайн-нетворкинг.</p>
+        <a href="#application" class="btn" style="margin-top:16px">Подать заявку в клуб <span>↗</span></a>
+      </div>
+      <div>
+        <ul class="benefits">
+          <li><i>01</i><div><b>Библиотека шаблонов</b><span>Первое письмо, сообщение после поездки, обоснование сервисного сбора, реакция на претензию, поздравление, которое работает. Пополнение ежемесячно.</span></div></li>
+          <li><i>02</i><div><b>Закрытый Telegram-чат</b><span>Ваши ситуации — ответы эксперта два раза в неделю: среда и пятница.</span></div></li>
+          <li><i>03</i><div><b>«Разбор полётов»</b><span>Анонимные провалы: сорванный VIP-заезд, молчащий партнёр, скандал в соцсетях. Разбор с точки зрения протокола и репутации.</span></div></li>
+          <li><i>04</i><div><b>Деньги и границы</b><span>Сервисный сбор до подбора тура, договор на информационно-консультационные услуги, элегантный отказ.</span></div></li>
+          <li><i>05</i><div><b>Репутационная безопасность</b><span>Чек-лист «Цифровая гигиена турагента» и алгоритм при репутационной атаке.</span></div></li>
+          <li><i>06</i><div><b>Тревел-архитектор</b><span>Как продавать то, чего нет на Booking: закрытый ужин на вилле, личный консьерж, доступ к событиям.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PODCAST -->
+<section class="section" id="podcast">
+  <div class="container">
+    <div class="podcast-head reveal">
+      <div>
+        <div class="eyebrow">Аудио-манифест</div>
+        <h2>Протокол.<br>Изнанка VIP-туризма.</h2>
+      </div>
+      <p class="lead">15–20 минут, плотно и без воды. Реальные кейсы, психология состоятельного клиента и правила закрытой игры. Раз в неделю, вторник 08:00 мск.</p>
+    </div>
+
+    <div class="episodes reveal">
+      <article class="episode">
+        <span class="ep-num">01</span>
+        <h3>Почему вы работаете 24/7, а зарабатываете как стажер</h3>
+        <p>Иллюзия «много клиентов = много денег». Почему один торгуется из-за трёх тысяч, а другой спрашивает, как заплатить за привилегию.</p>
+        <span class="time">15–20 МИН</span>
+      </article>
+      <article class="episode">
+        <span class="ep-num">02</span>
+        <h3>5 ошибок в WhatsApp, которые убивают сделку на миллион</h3>
+        <p>Тайминг ответов, реакци на сообщения и PDF-презентация, которую открывают, а не удаляют.</p>
+        <span class="time">15–20 МИН</span>
+      </article>
+      <article class="episode">
+        <span class="ep-num">05</span>
+        <h3>Как ввести сервисный сбор и услышать «спасибо»</h3>
+        <p>Почему вы боитесь назвать цену и за что именно клиент платит 30 000 ₽ до подбора тура. Готовые скрипты.</p>
+        <span class="time">15–20 МИН</span>
+      </article>
+      <article class="episode">
+        <span class="ep-num">10</span>
+        <h3>Тревел-архитектор vs бронировщик</h3>
+        <p>Почему VIP платит за доступ к вашим связям, а не за перелёт — и что добавить к туру, чего нельзя купить онлайн.</p>
+        <span class="time">15–20 МИН</span>
+      </article>
+    </div>
+
+    <div class="podcast-foot reveal">
+      <a href="#application" class="link-arrow">Забрать чек-лист «10 признаков VIP-клиента» ↗</a>
+      <span>Выпуски — на Яндекс Музыке, VK и Rutube · eliseevazhanna.ru/checklist</span>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section calc" id="calculator">
+  <div class="container calc-grid">
+    <div class="reveal">
+      <div class="eyebrow">Калькулятор потерь</div>
+      <h2>Сколько стоит<br>ваша недоступность?</h2>
+      <p style="color:rgba(234,229,221,.8);font-size:14px;margin:28px 0 46px;max-width:44ch">Двигайте ползунки. Посмотрите, сколько времени уходит на согласования и какой сервисный сбор вы пока не выставляете.</p>
+
+      <div class="field">
+        <label for="clients">Клиентов в месяц: <output class="range-value" id="clientsOut">12</output></label>
+        <input type="range" id="clients" min="3" max="40" value="12">
+      </div>
+      <div class="field">
+        <label for="hours">Часов на одного клиента: <output class="range-value" id="hoursOut">8</output></label>
+        <input type="range" id="hours" min="1" max="24" value="8">
+      </div>
+      <div class="field">
+        <label for="fee">Ваш сервисный сбор, ₽</label>
+        <select id="fee">
+          <option value="15000">15 000</option>
+          <option value="30000" selected>30 000</option>
+          <option value="50000">50 000</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="calc-result reveal">
+      <div class="metric"><b id="timeResult">96</b><span>часов в месяц на переписку и согласования</span></div>
+      <div class="metric"><b id="feeResult">360 000 ₽</b><span>сервисного сбора, который вы пока не называете</span></div>
+      <a href="#application" class="btn light">Научиться называть цену <span>↗</span></a>
+      <p class="fine">Оценка иллюстративная: предполагает, что сбор согласован и оплачен каждым клиентом. Не является прогнозом дохода.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container faq-grid">
+    <div class="reveal">
+      <div class="eyebrow">Перед заявкой</div>
+      <h2>Честные<br>ответы.</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq-item">
+        <summary>Чем это отличается от курсов по бронированию?<span>+</span></summary>
+        <p>Там учат ремеслу: система бронирования, договор, названия отелей. Здесь — мягкие навыки высокого чека: доверие, протокол, коммуникация, границы и удержание. Это разные навыки, и второй напрямую защищает вас от ценовой конкуренции.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Мне подходит, если у меня пока нет VIP-клиентов?<span>+</span></summary>
+        <p>Да, если вы уже работаете с турагентской практикой и хотите сменить сегмент. В линейке есть входная точка для перехода: диагностика модели работы, фильтрация «мусорных» лидов и первые скрипты сервисного сбора.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Как устроен клуб и сколько времени он занимает?<span>+</span></summary>
+        <p>Записанные модули в удобном темпе и часовом поясе плюс живые встречи и ответы в закрытом чате по средам и пятницам. Никаких обязательных эфиров ночами: формат рассчитан на практикующих агентов.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Можно оплатить в рассрочку?<span>+</span></summary>
+        <p>Да, для консультаций и участия в клубе предусмотрена рассрочка. Условия, договор и способ оплаты согласовываются индивидуально после заявки — через защищённый платёжный сервис, а не переводом на личную карту.</p>
+      </details>
+      <details class="faq-item">
+        <summary>А если у меня уже был провал с VIP?<span>+</span></summary>
+        <p>Тем более. В клубе есть анонимная рубрика «Разбор полётов»: вы присылаете ситуацию, мы разбираем её с точки зрения протокола, переговоров и сохранения репутации. Без публичности и без «успешного успеха».</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATION -->
+<section class="section application" id="application">
+  <div class="container form-grid">
+    <div class="reveal">
+      <div class="eyebrow">Доступ по заявке</div>
+      <h2>Начнём<br>с вашего кейса.</h2>
+      <p class="lead" style="color:var(--ink);margin-top:28px">В течение 24 часов я лично отправлю в Telegram три материала — без общих лекций и мотивационных рассылок.</p>
+      <ul class="gift">
+        <li>PDF «Цифровой этикет: 5 фраз в WhatsApp, которые убивают сделку на миллион»</li>
+        <li>Закрытый аудио-разбор: как вернули VIP-клиента после форс-мажора</li>
+        <li>Приглашение на диагностическую сессию</li>
+      </ul>
+    </div>
+
+    <form id="leadForm" class="reveal" novalidate>
+      <div class="form-field">
+        <label for="name">Как к вам обращаться</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Ваше имя" required>
+      </div>
+      <div class="form-field">
+        <label for="phone">Телефон</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+      </div>
+      <div class="form-field">
+        <label for="telegram">Ник в Telegram</label>
+        <input id="telegram" name="telegram" type="text" placeholder="@username" pattern="@[\w]{5,32}" required>
+      </div>
+      <label class="consent">
+        <input type="checkbox" id="consent" required>
+        <span>Согласен на обработку персональных данных для связи по заявке. Telegram — основной канал: туда удобнее прислать PDF, аудио и разбор, чем на почту.</span>
+      </label>
+      <button type="submit" class="btn">Получить доступ и разбор кейса <span>↗</span></button>
+      <p class="form-hint">Три поля и никаких длинных анкет. Ответ — лично от эксперта.</p>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <h3>Продает не отель.<br>Продает ваш протокол.</h3>
+        <p>Жанна Елисеева — премиум-наставничество по мягким навыкам для турагентов, работающих с VIP.</p>
+      </div>
+      <nav aria-label="Контакты">
+        <a href="https://t.me/zhannaelisee" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://zhannaeliseeva.ru/" target="_blank" rel="noopener">Основной сайт</a>
+        <a href="#products">Продукты</a>
+        <a href="#application">Оставить заявку</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Жанна Елисеева · eliseevazhanna.ru</span>
+      <span>Без «успешного успеха». Только протокол.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Mobile menu */
+const burger = document.getElementById('burger'), nav = document.getElementById('nav');
+burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+}));
+
+/* Scroll reveal */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* Calculator */
+const clients = document.getElementById('clients'),
+      hours = document.getElementById('hours'),
+      fee = document.getElementById('fee');
+const fmt = n => n.toLocaleString('ru-RU');
+function calc(){
+  document.getElementById('clientsOut').textContent = clients.value;
+  document.getElementById('hoursOut').textContent = hours.value;
+  document.getElementById('timeResult').textContent = fmt(clients.value * hours.value);
+  document.getElementById('feeResult').textContent = fmt(clients.value * Number(fee.value)) + ' ₽';
+}
+[clients,hours,fee].forEach(el => el.addEventListener('input', calc));
+calc();
+
+/* Form — demo. Подключить amoCRM Webform / Tilda CRM перед публикацией. */
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('name'),
+        phone = document.getElementById('phone'),
+        tg = document.getElementById('telegram'),
+        consent = document.getElementById('consent'),
+        status = document.getElementById('formStatus');
+
+  if(!name.value.trim()){ name.focus(); status.textContent='Пожалуйста, укажите имя.'; status.classList.add('show'); return; }
+  if(phone.value.replace(/\D/g,'').length < 10){ phone.focus(); status.textContent='Проверьте номер телефона.'; status.classList.add('show'); return; }
+  if(!/^@[A-Za-z0-9_]{5,32}$/.test(tg.value.trim())){ tg.focus(); status.textContent='Ник в Telegram нужен с @, например @ivanova.'; status.classList.add('show'); return; }
+  if(!consent.checked){ consent.focus(); status.textContent='Нужно согласие на обработку данных.'; status.classList.add('show'); return; }
+
+  status.classList.add('show');
+  status.textContent = name.value.trim() + ', заявка заполнена. Это демонстрационная версия: подключение к amoCRM выполняется перед публикацией. На боевом сайте материалы придут вам в Telegram в течение 24 часов.';
+});
+</script>
+</body>
+</html>
